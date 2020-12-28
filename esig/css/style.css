@@ -11,6 +11,13 @@ body {
 	margin-top: 1%;
 	font-family: 'Raleway', sans-serif;
 }
+#user a {
+	text-decoration: none;
+	color: #385273;
+}
+#user a:hover {
+	color: #9DC4C3;
+}
 #sidebar {
 	display: block;
 	float: left;
