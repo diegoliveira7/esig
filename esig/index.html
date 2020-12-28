@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="icon" href="img/graficopc.png" type="image/png" sizes="32x32">
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="graficoArea.js"></script>
+    <!--calbacks das funções dos graficos-->
+    <script>
+      google.charts.load('current', {'packages':['corechart'],
+        'language': 'pt'});
+      google.charts.setOnLoadCallback(desenharGraficoArea);
+    </script>
+    <script type="text/javascript" src="graficoPizza.js"></script>
+    <!--calbacks das funções dos graficos-->
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    </script>
+
+  <title>ESIG</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-light bg-light ">
+        <div  id="botao-menu" class=" col-md-1 col-sm-6">
+          <button class="navbar-toggler menu-item" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div id="img-nav" class=" col-md-5 col-sm-6 menu-item">
+          <a href="">
+            <img class=" " alt="home" src="img/mountains.png">
+          </a>
+        </div>
+        <div id="user" class="col-md-5 col-sm-8 menu-item">
+          <h4>RENEE MCKELVEY</h4>
+          <p><a href="#">Account Settings</a></p>   
+        </div>
+        <div id="img-user-nav" class="col-md-1 col-sm-1">
+          <a href="">
+           <img alt="usuario" class="img-user" src="img/user.png"> 
+          </a>
+        </div> 
+      </nav>
+
+      <!--sidebar-->
+      <div class="collapse show"id="navbarToggleExternalContent">
+            <ul class="nav" id="sidebar">
+                <li class="col-md-1">
+                  <a href="#"><img src="img/loupe.png"></a>
+                </li>
+                <li class="col-md-1">
+                  <a href="#"><img src="img/home.png"></a>
+                </li>
+                <li class="col-md-1">
+                  <a href="#"><img src="img/checklist.png"></a>
+                </li>
+                <li class="col-md-1">
+                  <a href="#"><img src="img/chart.png"></a>
+                </li>
+                <li class="col-md-1">
+                  <a href="#"><img src="img/upload.png"></a>
+                </li> 
+                <li class="col-md-1">
+                  <a href="#"><img src="img/image.png"></a>
+                </li>  
+                <li class="col-md-1">
+                  <a href="#"><img src="img/calendar.png"></a>
+                </li>
+                <li class="col-md-1">
+                  <a href="#"><img src="img/exchange.png"></a>
+                </li> 
+                <li class="col-md-1">
+                  <a href="#"><img src="img/settings.png"></a>
+                </li>                            
+            </ul>
+        </div>  
+
+        <!--totais-->
+        <div class="row" style="margin: 0;">
+
+          <div class="col-md-3 col-sm-12" id="total-item">
+            <img id="total-img" src="img/feira.png">
+            <h4>TOTAL SALES</h4>
+            <p>21.324</p>
+          </div>
+          <div class="col-md-3 col-sm-12" id="total-item">
+            <img id="total-img" src="img/etiqueta.png">
+            <h4>TOTAL INCOME</h4>
+            <p>$ 211.324</p>
+          </div> 
+          <div class="col-md-3 col-sm-12" id="total-item">
+            <img id="total-img" src="img/pc.png">
+            <h4>TOTAL VIEWS</h4>
+            <p>65.233</p>
+          </div> 
+
+          <!--performance-->
+          <div class="col-md-7 col-sm-12" id="performance">
+            <h4>PERFORMANCE</h4>
+            <button>
+              <img id="performance-img" src="img/settings.png">
+            </button>  
+            <hr>
+            <div id="graficoArea"></div>
+          </div>
+
+          <!--top categories-->
+          <div class="col-md-3 col-sm-12" id="categories">
+            <h4>TOP CATEGORIES</h4>  
+            <hr>    
+            <div id="piechart"></div>
+          </div>
+
+         <!--tabela--> 
+         <div class="col-md-12 col-sm-12" id="customers">
+           <h5>RECENT CUSTOMERS</h5>
+           <button>
+              <img id="customers-img" src="img/settings.png">
+            </button>
+         </div>
+          <div id="tabela" class="col-md-12 col-sm-12">
+            <table>
+              <tr>
+                <th>
+                  <h5>Jerry Mattedi</h5>
+                </th>
+                <th class="item-table">
+                  13 August 2018
+                  <p>Joined</p>
+                </th>
+                <th class="item-table">
+                  251-661-5362
+                  <p>Phone Number</p>
+                </th>
+                <th class="item-table">
+                  New York
+                  <p>Location</p>
+                </th>
+                <th style="text-align: center;">
+                  <button class="button-1">
+                    Options
+                  </button>
+                  <button class="button-2">
+                    Details
+                  </button>
+                </th>  
+              </tr>
+              <tr>
+                <th>
+                  <h5>Elianora Vasilov</h5>
+                </th>
+                <th class="item-table">
+                  13 August 2018
+                  <p>Joined</p>
+                </th>
+                <th class="item-table">
+                  251-661-5362
+                  <p>Phone Number</p>
+                </th>
+                <th class="item-table">
+                  Ontario
+                  <p>Location</p>
+                </th>
+                <th style="text-align: center;">
+                  <button class="button-1">
+                    Options
+                  </button>
+                  <button class="button-2">
+                    Details
+                  </button>
+                </th>  
+              </tr>
+              <tr>
+                <th>
+                  <h5>Marcos Anguiano</h5>
+                </th>
+                <th class="item-table">
+                  13 August 2018
+                  <p>Joined</p>
+                </th>
+                <th class="item-table">
+                  251-661-5362
+                  <p>Phone Number</p>
+                </th>
+                <th class="item-table">
+                  Milan
+                  <p>Location</p>
+                </th>
+                <th style="text-align: center;">
+                  <button class="button-1">
+                    Options
+                  </button>
+                  <button class="button-2">
+                    Details
+                  </button>
+                </th>  
+              </tr>
+              <tr>
+                <th>
+                  <h5>Alves Daen</h5>
+                </th>
+                <th class="item-table">
+                  13 August 2018
+                  <p>Joined</p>
+                </th>
+                <th class="item-table">
+                  251-661-5362
+                  <p>Phone Number</p>
+                </th>
+                <th class="item-table">
+                  Las vegas
+                  <p>Location</p>
+                </th>
+                <th style="text-align: center;">
+                  <button class="button-1">
+                    Options
+                  </button>
+                  <button class="button-2">
+                    Details
+                  </button>
+                </th>  
+              </tr>
+            </table>
+          </div>  
+        </div>        
+
+<hr>
+
+<footer class="col-md-12 col-sm-12">
+  <p>&copy Your company details</p>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
